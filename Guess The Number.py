@@ -6,3 +6,5 @@ while True:
 		print("You found the secret!")
 	elif value > 50:
 		print("Too big!")
+	else:
+		print ("You got it!")
