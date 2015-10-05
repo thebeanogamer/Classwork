@@ -26,9 +26,7 @@ while True:
 	elif 20 <= age <= 59:
 		print ("You are a adult, congratulations!")
 	else:
-		if 200 <= age:
-			print ("You are a liar!")
-		elif 123 <= age:
+		if 123 <= age:
 				print ("You are the oldest person ever, congratulations!")
 		elif 60 <= age:
 			print ("You are a OAP, congratulations!")
