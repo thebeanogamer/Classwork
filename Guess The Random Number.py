@@ -1,8 +1,10 @@
 import random
 import os
+import sys
 
 while True:
-	times = 0
+	againhuman = ""
+	times = 
 	answer = random.randint(1,100)
 	print ("In this game you have to guess the whole number, between 1 and 100!")
 	while True:
@@ -10,8 +12,12 @@ while True:
 		if guess == answer:
 			times = times + 1
 			print("You got it right, and it took you ",times, "goes")
-			input("Hit enter to start again")
-			os.system("cls")
+			againhuman = input("Go again? ")
+			if againhuman == "yes" or againhuman == "Yes":
+				sys.exit()
+			else:
+				input("Hit enter to start again")
+				os.system("cls")
 			break
 		elif answer > guess:
 			times = times + 1
