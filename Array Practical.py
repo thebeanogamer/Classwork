@@ -6,4 +6,6 @@ while a < len(Names):
 	age = int(input("How old are you? "))
 	if age <= 16:
 		print ("You should still be at school!")
+	else:
+		print ('You are a "responsible" adult!')
 	a = a + 1

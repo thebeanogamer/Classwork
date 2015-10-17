@@ -8,13 +8,13 @@ while True:
 		#Checks if the input is a number
 		height = int(height) + 1
 		#Converts height to a intger
-		while height < 3 or height > 20:
+		if height > 3 and height <= 21:
+			while x < height:
+				print ("*" * x)
+				x = x + 1
+		else:
 			print ("No, thats not what I asked for. Read it again!")
-			height = input("How tall should the tree be (3-20)? ")
-			break
-		while x < height:
-			print ("*" * x)
-			x = x + 1
+			print ()
 	elif height == "exit":
 		sys.exit()
 	else:
