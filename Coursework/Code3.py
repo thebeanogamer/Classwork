@@ -1,0 +1,7 @@
+print ("I need some information!")
+p1skill = int(input("What is player 1's skill? "))
+p1str = int(input("What is player 1's strength? "))
+p1name = input("What is player 1's name? ")
+p2skill = int(input("What is player 2's skill? "))
+p2str = int(input("What is player 2's strength? "))
+p2name = input("What is player 2's name? ")
