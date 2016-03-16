@@ -1,4 +1,5 @@
 import random
+import math
 x = 0
 Names = ["Ulli","Dwight","Brady","Waldo","Florus","Sullivan","Ramsey","Howard","Laurent","Raimund","Amira","Felicia","Cassandra","Selma","Zaria","Sorren","Voletta","Rieke","Sibilla","Liane"]
 while x != 2:
@@ -7,8 +8,8 @@ while x != 2:
 	Number2 = random.randint(1,4)
 	Number3 = random.randint(1,12)
 	Number4 = random.randint(1,4)
-	FinalNumber1 = 10 + int(Number1 / Number2)
-	FinalNumber2 = 10 + int(Number3 / Number4)
+	FinalNumber1 = 10 + math.trunc(Number1 / Number2)
+	FinalNumber2 = 10 + math.trunc(Number3 / Number4)
 	YourName = (Names[NamePos])
 	file = open("File.txt",'a')
 	file.write(str(FinalNumber1) + " " + str(FinalNumber2) + " " + YourName)
