@@ -1,4 +1,5 @@
 import random
+import math
 
 def nodie():
 	print ()
@@ -10,22 +11,22 @@ def nodie():
 
 print ("I need some information!")
 print ()
-p1skill = int(input("What is player 1's skill? "))
-p1str = int(input("What is player 1's strength? "))
+p1skill = math.trunc(input("What is player 1's skill? "))
+p1str = math.trunc(input("What is player 1's strength? "))
 p1name = input("What is player 1's name? ")
-p2skill = int(input("What is player 2's skill? "))
-p2str = int(input("What is player 2's strength? "))
+p2skill = math.trunc(input("What is player 2's skill? "))
+p2str = math.trunc(input("What is player 2's strength? "))
 p2name = input("What is player 2's name? ")
 
 if p1str < p2str:
-	strmod = int((p2str - p1str)/5)
+	strmod = math.trunc((p2str - p1str)/5)
 else:
-	strmod = int((p1str - p2str)/5)
+	strmod = math.trunc((p1str - p2str)/5)
 
 if p1skill < p2skill:
-	skillmod = int((p2skill - p1skill)/5)
+	skillmod = math.trunc((p2skill - p1skill)/5)
 else:
-	skillmod = int((p1skill - p2skill)/5)
+	skillmod = math.trunc((p1skill - p2skill)/5)
 	
 print ()
 print ("Your strength modifier is",strmod)
