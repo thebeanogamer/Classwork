@@ -1,6 +1,8 @@
 import random
 import math
 
+continue1 = True
+
 def nodie():
 	print ()
 	print ("And they both lived to fight another day with the following stats!")
@@ -11,13 +13,39 @@ def nodie():
 
 print ("I need some information!")
 print ()
-p1skill = math.trunc(input("What is player 1's skill? "))
-p1str = math.trunc(input("What is player 1's strength? "))
+while continue1 == True:
+	p1skill = input("What is player 1's skill? ")
+	if p1skill.isdigit() == True:
+		p1skill = math.trunc(float(p1skill))
+		continue1 = False
+	else:
+		print ("Thats not a number")
+continue1 = True
+while continue1 == True:
+	p1str = input("What is player 1's strength? ")
+	if p1str.isdigit() == True:
+		p1str = math.trunc(float(p1str))
+		continue1 = False
+	else:
+		print ("Thats not a number")
+continue1 = True
 p1name = input("What is player 1's name? ")
-p2skill = math.trunc(input("What is player 2's skill? "))
-p2str = math.trunc(input("What is player 2's strength? "))
+while continue1 == True:
+	p2skill = input("What is player 2's skill? ")
+	if p2skill.isdigit() == True:
+		p2skill = math.trunc(float(p2skill))
+		continue1 = False
+	else:
+		print ("Thats not a number")
+continue1 = True
+while continue1 == True:
+	p2str = input("What is player 2's strength? ")
+	if p2str.isdigit() == True:
+		p2str = math.trunc(float(p2str))
+		continue1 = False
+	else:
+		print ("Thats not a number")
 p2name = input("What is player 2's name? ")
-
 if p1str < p2str:
 	strmod = math.trunc((p2str - p1str)/5)
 else:
