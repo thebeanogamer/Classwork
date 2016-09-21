@@ -8,7 +8,7 @@ def RemovePunctuation(Original):
 	Words = len(Original)
 	while y != Words:
 		while z != len(Punctuation):
-			Original[x].replace(Punctuation[y],"")
+			Original[y] = Original[y].replace(Punctuation[y],"")
 			z = z + 1
 		y = y + 1
 		z = 0
@@ -19,8 +19,11 @@ while Continue == True:
 	x = 0
 	a = 0
 	String = input("What is the string: ").lower().split()
-	while a != len(String):#
-		
+#	while a != len(String):
+#		StringRaw = String[a]
+#		RemovePunctuation(StringRaw)
+#		String[a] = StringRaw
+#		a = a + 1
 	Term = input("What is the search term: ").lower().split()
 	while x != len(String):
 		if Term == String[x]:
