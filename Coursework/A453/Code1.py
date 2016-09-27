@@ -12,7 +12,7 @@ while Continue == True:
 	x = 0
 	# Used to monitor position in string
 	Present = False
-	# Creates a failsafe i ncase the string is not present
+	# Creates a failsafe in case the string is not present
 	String = input("What is the string: ").lower()
 	# Asks the user to input a string
 	no_punct1 = ""
