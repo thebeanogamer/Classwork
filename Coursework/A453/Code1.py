@@ -1,7 +1,7 @@
 import os
 # Imports OS to make terminal clear possible
 
-punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~£'''
 # Creates list of all punctuation to replace
 
 Continue = True
