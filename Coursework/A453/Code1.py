@@ -8,8 +8,10 @@ Continue = True
 
 while Continue == True:
 	# Ensures program will run until told otherwise
-	punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~£'''
-	# Creates list of all punctuation to replace, it is inside the loop so as to allow the user to change their mind about numbers.
+	punctuations = ''
+	# Creates empty list of punctuation to remove
+	punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~£'''
+	# Creates list of all possible punctuation to replace
 	x = 0
 	# Used to monitor position in string
 	Present = False
@@ -20,10 +22,21 @@ while Continue == True:
 		print ("Um, no. Give me somthing to work with!")
 		String = input("What is the string: ").lower()
 		# Repeats the question until it gets an answer
-	Number = input("Would you like to remove numbers (Y/N) ").lower()
-	if Number == "y":
-		punctuations = punctuations + numbers
-		print ("Ok, I will ignore numbers!")
+	Runpunct = input("Would you like to filter charecters out of the string (Y/N) ").lower()
+	if Runpunct == "y":
+		# Checks if the filter process should be run
+		Numberremove = input("Would you like to remove numbers (Y/N) ").lower()
+		# Finds out if the user wants to remove numbers
+		if Numberremove == "y":
+			punctuations = punctuations + numbers
+			# Adds numbers to the list of charecters to remove
+			print ("Ok, I will ignore numbers!")
+		Punctremove = input("Would you like to remove punctuation (Y/N) ").lower()
+		# Finds out if the user wants to remove punctuation
+		if Punctremove == "y":
+				punctuations = punctuations + punctuation
+				# Adds numbers to the list of charecters to remove
+				print ("Ok, I will ignore punctuation")
 	no_punct1 = ""
 	no_punct2 = ""
 	# Creates empty variables to store punctuation free strings
