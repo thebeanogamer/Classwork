@@ -1,4 +1,3 @@
-
 import os
 # Imports OS to make terminal clear possible
 
