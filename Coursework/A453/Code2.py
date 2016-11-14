@@ -1,9 +1,13 @@
 punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~£'''
-StringPos = 0
-ArrayPos = 0
-Happens = False
-Finalstring = ""
-Finalnumbers = ""
+no_punct1 = ""
+wordschecked = 0
+# the position in the users input
+wordchecklooppos = 0
+# the position in the words array
+wordcheckstring = 0
+finalwords = [None]
+finalnumbers = [None]
+alreadydone = False
 
 String = str(input("What is your string? ").lower())
 while String == "":
@@ -11,22 +15,20 @@ while String == "":
 	String = input("What is your string? ").lower()
 for char in String:
 	if char not in punctuation:
-		Finalstring = Finalstring + char
-Finalstring = str(Finalstring.split())
-while StringPos != len(Finalstring):
-	while ArrayPos != len(String):
-		if Finalstring[ArrayPos] == Finalstring [ArrayPos]:
-			Happens = True
-			break
-		ArrayPos = ArrayPos + 1
-	if Happens == True:
-		Finalnumbers = Finalnumbers + str(ArrayPos)
+		no_punct1 = no_punct1 + char
+no_punct1 = no_punct1.split()
+while wordschecked != len(no_punct1):
+	while wordchecklooppos != len(finalwords):
+		if finalwords[wordchecklooppos] == no_punct1[wordschecked]:
+			alreadydone = True
+	if alreadydone == False:
+		finalwords = finalwords.append(no_punct1[wordschecked])
+		finalnumbers = finalnumbers.append(wordchecklooppos)
+		wordchecklooppos = wordchecklooppos + 1
 	else:
-		FinalWords = Finalwords.append(String[StringPos])
-		Finalnumbers = Finalnumber.append(ArrayPos + 1)
-	StringPos = StringPos + 1
-print(Finalnumbers)
-print(FinalWords)
-#Open files to replace
-#Write FinalWords to file
-#Write Finalnumbers to file
+		finalnumbers = finalnumbers.append(wordschecked)
+		wordchecklooppos = wordchecklooppos + 1
+	alreadydone = False
+	wordschecked = wordschecked + 1
+print (finalwords)
+print (finalnumbers)
