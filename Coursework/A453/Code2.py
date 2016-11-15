@@ -1,13 +1,8 @@
 punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~£'''
 no_punct1 = ""
 wordschecked = 0
-# the position in the users input
-wordchecklooppos = 0
-# the position in the words array
-wordcheckstring = 0
-finalwords = [None]
-finalnumbers = [None]
-alreadydone = False
+finalwords = []
+finalnumbers = []
 
 String = str(input("What is your string? ").lower())
 while String == "":
@@ -18,17 +13,15 @@ for char in String:
 		no_punct1 = no_punct1 + char
 no_punct1 = no_punct1.split()
 while wordschecked != len(no_punct1):
-	while wordchecklooppos != len(finalwords):
-		if finalwords[wordchecklooppos] == no_punct1[wordschecked]:
-			alreadydone = True
-	if alreadydone == False:
-		finalwords = finalwords.append(no_punct1[wordschecked])
-		finalnumbers = finalnumbers.append(wordchecklooppos)
-		wordchecklooppos = wordchecklooppos + 1
+	if any(no_punct1[wordschecked] in s for s in finalwords):
+		finalnumbers.append(finalwords.index(no_punct1[wordschecked]))
 	else:
-		finalnumbers = finalnumbers.append(wordschecked)
-		wordchecklooppos = wordchecklooppos + 1
-	alreadydone = False
+		finalnumbers.append(wordschecked)
+		finalwords.append(no_punct1[wordschecked])
 	wordschecked = wordschecked + 1
 print (finalwords)
 print (finalnumbers)
+wordsfile = open("words.txt",'w')
+numbersfile = open("numbers.txt", 'w')
+wordsfile = wordsfile.write(str(finalwords))
+numbersfile = numbersfile.write(str(finalnumbers))
