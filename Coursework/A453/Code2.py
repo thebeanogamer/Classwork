@@ -1,13 +1,14 @@
 punctuation = '''!()-[]{};:'"\,<>./?@#$%^&*_~£'''
 # Creates the list of punctuation to remove
 no_punct1 = ""
-# Creates the string to contain the punctuation free inpu
+# Creates the string to contain the punctuation free input
 wordschecked = 0
 # Monitors the word being edited
 finalwords = []
 # Creates the array for the words
 finalnumbers = []
 # Creates the array for the numbers
+Arrayword = 0
 
 String = str(input("What is your string? ").lower())
 # Gets the user's input
@@ -28,10 +29,11 @@ while wordschecked != len(no_punct1):
 		finalnumbers.append(finalwords.index(no_punct1[wordschecked]))
 		# Adds the number corresponding to the position in the words array to the numbers array
 	else:
-		finalnumbers.append(wordschecked)
+		finalnumbers.append(Arrayword)
 		# Adds the current word number to the numbers array
 		finalwords.append(no_punct1[wordschecked])
 		# Adds the current word to the words array
+		Arrayword = Arrayword + 1
 	wordschecked = wordschecked + 1
 	# Goes to the next word in the array
 print (finalwords)
