@@ -10,6 +10,7 @@ finalnumbers = []
 # Creates the array for the numbers
 Arrayword = 0
 
+print ("This program will encrypt your string")
 String = str(input("What is your string? ").lower())
 # Gets the user's input
 while String == "":
