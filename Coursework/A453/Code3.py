@@ -77,7 +77,7 @@ else:
 		Finalwords = (Finalwords + no_punctwords[no_punctnumbers[Currentword]] + " ")
 		Currentword = Currentword + 1
 		# Recreates the string by adding words corresponding to their position in the array
-	print('Your string is "', Finalwords + '"')
+	print('Your string is "' + Finalwords + '"')
 	Filewrite = input ("Do you want to write to a file? (Y/N) ").lower()
 	if Filewrite == "y":
 		Filename = (input("What should the file be called? ") + ".txt")
