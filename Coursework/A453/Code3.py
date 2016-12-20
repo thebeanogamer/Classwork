@@ -20,6 +20,10 @@ if Command == "encrypt":
 	Arrayword = 0
 	# Create the variables
 	String = input("What is your string? ")
+	while String == "":
+		# Checks if the string is empty
+		print ("Um, no. Give me something to work with!")
+		String = input("What is your string? ")
 	# Gets the user to input a string
 	String = String.split()
 	# Breaks the inputted string down into an array
@@ -37,7 +41,15 @@ if Command == "encrypt":
 			Arrayword = Arrayword + 1
 		Wordschecked = Wordschecked + 1
 	Wordname = (input("What should the word file be called? ") + ".txt")
+	while Wordname == "":
+		# Checks if the string is empty
+		print ("Um, no. Give me something to work with!")
+		Wordname = (input("What should the word file be called? ") + ".txt")
 	Numbersname = (input("What should the numbers file be called? ") + ".txt")
+	while Numbersname == "":
+		# Checks if the string is empty
+		print ("Um, no. Give me something to work with!")
+		Numbersname = (input("What should the numbers file be called? ") + ".txt")
 	# Finds out what the user wants to call the files and adds ".txt" to the end
 	Wordsfile = open(Wordname,'w')
 	Numbersfile = open(Numbersname,'w')
@@ -53,8 +65,18 @@ else:
 	Currentword = 0
 	Finalwords = ""
 	# Create the variables
-	Wordname = (input("What is the word file called? ") + ".txt")
-	Numbersname = (input("What is the numbers file called? ") + ".txt")
+	Wordname = input("What should the word file be called? ")
+	while Wordname == "":
+		# Checks if the string is empty
+		print ("Um, no. Give me something to work with!")
+		Wordname = input("What should the word file be called? ")
+	Wordname = Wordname + ".txt"
+	Numbersname = input("What should the numbers file be called? ")
+	while Numbersname == "":
+		# Checks if the string is empty
+		print ("Um, no. Give me something to work with!")
+		Numbersname = input("What should the numbers file be called? ")
+	Numbersname = Numbersname + ".txt"
 	# Finds out what the user wants to called the file and adds ".txt" to the end
 	Wordsfile = (open(Wordname,'r')).read()
 	# Opens the named file
@@ -77,7 +99,7 @@ else:
 		Finalwords = (Finalwords + no_punctwords[no_punctnumbers[Currentword]] + " ")
 		Currentword = Currentword + 1
 		# Recreates the string by adding words corresponding to their position in the array
-	print('Your string is "' + Finalwords + '"')
+	print('Your string is "' +  Finalwords + '"')
 	Filewrite = input ("Do you want to write to a file? (Y/N) ").lower()
 	if Filewrite == "y":
 		Filename = (input("What should the file be called? ") + ".txt")
