@@ -1,4 +1,4 @@
 # Classwork
 All of my programs I have built in class
 
-I love :pizza:, :airplane:'s and :roller_coaster:
+I love :pizza:, :airplane: and :roller_coaster:
