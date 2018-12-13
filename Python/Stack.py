@@ -1,5 +1,6 @@
 array = []
-while True:
+proceed = True
+while proceed:
     action = input("What action would you like to take? ").lower()
     if (action == "view"):
         print(array)
@@ -8,3 +9,7 @@ while True:
     elif (action == "remove"):
         if (array != []):
             array.pop()
+    elif (action == "exit"):
+        proceed = False
+    else:
+        print("Unrecognised Command")
