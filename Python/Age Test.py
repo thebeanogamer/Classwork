@@ -21,7 +21,7 @@ while True:
 		print ("You are a young child, congratulations!")
 	elif 8 <= age <= 12:
 		print ("You are a child, congratulations!")
-	elif 13<= age <= 19:
+	elif 13 <= age <= 19:
 		print ("You are a teenager, congratulations!")
 	elif 20 <= age <= 59:
 		print ("You are a adult, congratulations!")
